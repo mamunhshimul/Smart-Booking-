@@ -18,11 +18,8 @@ export default function NestedList(props) {
   const handleClick = () => {
     setOpen(!open);
   };
-
-  // const cardSubTitles = ['orange', 'apple', 'watermelon']
-  const cardSubTitles = props.cardSubTitle
-
-  // const list = products.map(product => <li key={product}>{product}</li>)
+ 
+ 
 
   return (
     <List
@@ -33,27 +30,13 @@ export default function NestedList(props) {
 
    
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <InboxIcon />
+        <ListItemIcon> 
+          {props.listIcon}
         </ListItemIcon>
-        <ListItemText primary={props.cardTitle} />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText primary={props.listTitle} /> 
       </ListItemButton>
 
-      {cardSubTitles.map((product, i) => (
-              <Collapse in={open} timeout="auto" unmountOnExit key={i}>
-              <List component="div" disablePadding>
-                <ListItemButton sx={{ pl: 4 }} >
-                  <ListItemIcon>
-                    <StarBorder />
-                  </ListItemIcon>
-                 
-                  {/* {product}- */}
-                  <ListItemText primary={product} />
-                </ListItemButton>
-              </List>
-            </Collapse>  
-      ))} 
+  
 
  
             
