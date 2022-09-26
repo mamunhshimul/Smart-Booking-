@@ -18,28 +18,28 @@ export default function NestedList(props) {
   const handleClick = () => {
     setOpen(!open);
   };
- 
- 
+
+
 
   return (
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+      sx={{ width: '100%', bgcolor: 'background.paper' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
     >
 
-   
+
       <ListItemButton onClick={handleClick}>
-        <ListItemIcon> 
+        <ListItemIcon>
           {props.listIcon}
         </ListItemIcon>
-        <ListItemText primary={props.listTitle} /> 
+        <ListItemText primary={props.listTitle} />
       </ListItemButton>
 
-  
 
- 
-            
+
+
+
 
     </List>
   );

@@ -3,17 +3,29 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Usercard from '../components/userCard'
-import MainLayout from '../components/layouts/main'
+import LayoutLanding from '../components/layouts/landing'
+import MainTabs from '../components/elements/mainTabs'
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+
+
+
 
 
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
- 
-
+    <div>
       <main className={styles.main}>
-        dd
+
+        <div className='siteBanner'>
+          <Container maxWidth="lg">
+            <p>Available until Jan 3, 2023</p>
+            <h2>Save 15% with Late Escape Deals</h2>
+            <p>There’s still time to check one more destination off your wishlist</p>
+          </Container>
+        </div>
+
       </main>
 
       <footer className={styles.footer}>
@@ -28,10 +40,31 @@ const Home: NextPage = () => {
           </span>
         </a>
       </footer>
+      <style jsx>{` 
+   
+   .siteBanner { 
+        background-image:url('https://images.unsplash.com/photo-1632018197183-6d2d4db44b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
+        padding:85px 0;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+
+        } 
+        .siteBanner h2{ 
+          color:white;
+          font-size:50px;
+          margin:0;
+        } 
+        .siteBanner p{  
+          color:white;
+          font-size:20px!important;
+        } 
+    `}</style>
     </div>
   )
 }
 
-Home.layout = MainLayout
+Home.layout = LayoutLanding
+console.log(Home.layout + 'mamujn')
 
 export default Home

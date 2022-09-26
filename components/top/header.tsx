@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 import Usercard from '../userCard'
+import HeaderTop from '../header/headerTop'
 
 // MUI ui
 import { styled } from '@mui/material/styles';
@@ -21,6 +22,9 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <header className='header'>
+
+            <HeaderTop/>
+
                 <Grid container spacing={8}> 
                     <Grid item xs={12} sx={{ display: 'inline-flex', justifyContent: 'flex-end' }}>
                         <Usercard
