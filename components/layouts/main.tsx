@@ -6,14 +6,21 @@ const MainLayout: LayoutProps = ({ children }) => {
     <div>
       <div className="MainHeader">
         <Header />
+      </div>
+
+      <div className='sitePadding'>
         <Leftbar />
-      </div> 
-      {children} 
+        {children}
+
+      </div>
 
       <style jsx>{` 
    
    .MainHeader {
           background: #ddd;
+        }
+        .sitePadding{
+          padding:50px;
         } 
     `}</style>
     </div>

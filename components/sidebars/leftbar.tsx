@@ -17,6 +17,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import Button from '@mui/material/Button';
+
+
+
+
+
 
 //icons
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -26,6 +32,10 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import PublicIcon from '@mui/icons-material/Public';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
+
+
+import SendIcon from '@mui/icons-material/Send';
 
 
 
@@ -43,47 +53,52 @@ export default function RecipeReviewCard() {
                 }
                 title="Bokking"
             />
-            <CardContent> 
-          
+            <CardContent>
+
                 <ListWithIcon
-                    listTitle={'Home'} 
-                    listIcon={<HomeIcon />} 
+                    listTitle={'Home'}
+                    listIcon={<HomeIcon />}
                 />
                 <ListWithIcon
-                    listTitle={'Wallet'} 
-                    listIcon={<AccountBalanceWalletIcon />} 
+                    listTitle={'Wallet'}
+                    listIcon={<AccountBalanceWalletIcon />}
                 />
                 <ListWithIcon
-                    listTitle={'Booking'} 
-                    listIcon={<ContactsIcon />} 
+                    listTitle={'Booking'}
+                    listIcon={<ContactsIcon />}
                 />
                 <ListWithIcon
-                    listTitle={'Business'} 
-                    listIcon={<BusinessCenterIcon />} 
+                    listTitle={'Business'}
+                    listIcon={<BusinessCenterIcon />}
                 />
                 <ListWithIcon
-                    listTitle={'Explore'} 
-                    listIcon={<PublicIcon />} 
+                    listTitle={'Explore'}
+                    listIcon={<PublicIcon />}
                 />
                 <ListWithIcon
-                    listTitle={'Support'} 
-                    listIcon={<LiveHelpIcon />} 
+                    listTitle={'Support'}
+                    listIcon={<LiveHelpIcon />}
                 />
 
-                <Typography variant="body2" color="text.secondary">
-                    This impressive paella is a perfect party dish and a fun meal to cook
-                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                    if you like.
-                </Typography>
+
             </CardContent>
-            <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
+            <CardActions disableSpacing >
+
+                <div className='listAction'>
+                    <Button variant="contained" endIcon={<SendIcon />}>
+                        Get Premiums
+                    </Button>
+                </div>
+
             </CardActions>
+
+
+            <style style jsx > {` 
+   
+   .listAction {  
+        } 
+    `}</style >
+
         </Card>
     );
 }
