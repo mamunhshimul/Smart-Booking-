@@ -14,9 +14,11 @@
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.4",
     "@mui/styled-engine-sc": "^5.10.3",
+    "moment": "^2.29.4",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {

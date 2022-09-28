@@ -1,12 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import SearchForm from '../components/search/searchForm';
+
+// Meteril UI
 import styles from '../styles/Home.module.css'
 import Usercard from '../components/userCard'
 import LayoutLanding from '../components/layouts/landing'
 import MainTabs from '../components/elements/mainTabs'
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 
 
@@ -23,8 +27,16 @@ const Home: NextPage = () => {
             <p>Available until Jan 3, 2023</p>
             <h2>Save 15% with Late Escape Deals</h2>
             <p>There’s still time to check one more destination off your wishlist</p>
+            <Button variant="contained">Contained</Button> 
           </Container>
         </div>
+        <Container maxWidth="lg">
+          <div className='home-searchFrom'>
+            <SearchForm />
+          </div>
+        </Container>
+
+        <div></div>
 
       </main>
 
@@ -59,12 +71,14 @@ const Home: NextPage = () => {
           color:white;
           font-size:20px!important;
         } 
+        .home-searchFrom{
+          margin:50px 0;
+        }
     `}</style>
     </div>
   )
 }
 
 Home.layout = LayoutLanding
-console.log(Home.layout + 'mamujn')
 
 export default Home
